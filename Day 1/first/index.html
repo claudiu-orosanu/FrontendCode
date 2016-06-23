@@ -8,6 +8,7 @@
         }
     </style>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <title>Title</title>
 </head>
 <body>
@@ -16,5 +17,26 @@
 <div id="pagedescription" class="description">
     Here you can access the list of employees or you can access the page for adding a new employee.
 </div>
+<div id="appmenu" class="description">
+    <ul class="list-group">
+        <li class="list-group-item"><a href="list.html">Employees list</a></li>
+    </ul>
+</div>
+
+<div class="btn-group">
+    <button type="button" onclick="showMenu()" class="btn btndefault">
+        Show Menu</button>
+    <button type="button" onclick="hideMenu()" class="btn btndefault">
+        Hide Menu</button>
+</div>
+
+<script type="text/javascript">
+    function showMenu() {
+        document.getElementById("appmenu").style.display = 'block';
+    }
+    function hideMenu() {
+        document.getElementById("appmenu").style.display = 'none';
+    }
+</script>
 </body>
 </html>
