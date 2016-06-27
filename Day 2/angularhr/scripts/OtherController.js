@@ -3,7 +3,7 @@
  */
 hrApp.controller('OtherController', function ($scope,$rootScope) {
     $scope.title = "Titlu";
-    $scope.setTitle = function (val) {
-        $scope.title = val;
+    $scope.setTitle = function () {
+        $scope.title = 'Random';
     }
 });

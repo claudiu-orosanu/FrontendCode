@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demomath</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+<div class="container" ng-app="hrApp">
+    <div class="jumbotron" ng-controller="DemoController">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                <h3>Math Demonstration</h3>
+            </div>
+            <div class="panel-body">
+                <p>Number A: <input type="number" ng-model="a"> </p>
+                <p>Number B: <input type="number" ng-model="b"> </p>
+                <br>
+                <p>A+B = {{a+b}}</p>
+                <p>A-B = {{a-b}}</p>
+                <p>A*B = {{a*b}}</p>
+                <p>A/B = {{a/b}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/DemoController.js"></script>
+</body>
+</html>
