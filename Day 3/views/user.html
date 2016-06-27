@@ -1,0 +1,64 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add user</h2>
+    </div>
+    <div class="panel-body">
+        <div class="text-center">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <p>First Name: <br> <input type="text" ng-model="Firstname"></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div>
+                        <p>Last Name: <br> <input type="text" ng-model="Lastname"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <p>Id: <br> <input type="number" ng-model="Id"></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div>
+                        <p>Age: <br> <input type="number" ng-model="Age"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" ng-click="save()">Add User</button>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <button class="btn btn-primary" ng-click="back()">Back</button>
+    <button class="btn btn-primary" ng-click="reset()">Reset</button>
+    <button class="btn btn-primary" ng-click="show()">Show/Hide Table</button>
+</div>
+<br>
+<table ng-if="visible" class="table table-striped">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Id</th>
+        <th>Age</th>
+    </tr>
+    <tr ng-repeat="user in userList">
+        <td class="text-left">
+            {{user.firstname}}
+        </td>
+        <td class="text-left">
+            {{user.lastname}}
+        </td>
+        <td class="text-left">
+            {{user.id}}
+        </td>
+        <td class="text-left">
+            {{user.age}}
+        </td>
+    </tr>
+</table>
