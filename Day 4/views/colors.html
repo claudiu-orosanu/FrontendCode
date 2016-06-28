@@ -1,0 +1,14 @@
+<div>
+    <select ng-options="color.text for color in colors" ng-model="myColor" ng-change="changeColor()"></select>
+    <p><span ng-class="myColor.class">Some text</span></p>
+    <br>
+    <p>Filter by: <input type="text" ng-model="filterList.text"></p>
+    <br><br>
+    <p>Order by: <input type="text" ng-model="orderList"></p>
+    <br><br>
+    <div>
+        <ul>
+            <li ng-repeat="color in colors | orderBy:'-'+orderList| filter:filterList">{{color.text}}</li>
+        </ul>
+    </div>
+</div>

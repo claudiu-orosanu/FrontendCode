@@ -1,0 +1,14 @@
+<ng-form name="myForm">
+    <p>Input: <input type="text" name="input" ng-model="Input" required></p>
+    <p><span ng-hide="myForm.input.$valid">Required!</span></p>
+    myForm.input.$pristine = {{myForm.input.$pristine}} <br>
+    myForm.input.$dirty = {{myForm.input.$dirty}} <br>
+    myForm.input.$valid = {{myForm.input.$valid}} <br>
+    myForm.input.$invalid = {{myForm.input.$invalid}} <br>
+    myForm.$submitted = {{myForm.$submitted}} <br>
+<!--
+    myForm.input.$error = {{myForm.$error}} <br>
+-->
+    <input type="button" ng-click="submitted()" value="Submit">
+
+</ng-form>
